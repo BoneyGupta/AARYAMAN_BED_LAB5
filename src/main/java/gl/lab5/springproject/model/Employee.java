@@ -12,25 +12,23 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-@Table(name="employee")
+@Table(name = "employee")
 @Entity
 public class Employee {
-	
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	@Column(name="emp_id")
+	@Column(name = "emp_id")
 	int empId;
-	@Column(name="emp_first_name")
+	@Column(name = "emp_first_name")
 	String empFirstName;
-	@Column(name="emp_last_name")
+	@Column(name = "emp_last_name")
 	String empLastName;
-	@Column(name="emp_email")
+	@Column(name = "emp_email")
 	String empEmail;
-	
-	public Employee(){
+
+	public Employee() {
 		super();
 	}
-	
-	
-	
+
 }

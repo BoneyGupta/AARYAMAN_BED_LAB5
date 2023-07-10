@@ -10,15 +10,15 @@ import gl.lab5.springproject.dao.MyRepository;
 import gl.lab5.springproject.model.Employee;
 
 @Service
-public class MyServiceImpl implements MyService{
-	
+public class MyServiceImpl implements MyService {
+
 	@Autowired
 	MyRepository repo;
 
 	@Override
 	public List<Employee> getAllEmployees() {
 		return repo.findAll();
-		
+
 	}
 
 	@Override
@@ -35,11 +35,10 @@ public class MyServiceImpl implements MyService{
 	@Override
 	public Employee findById(int id) {
 		Optional<Employee> optemp = repo.findById(id);
-		if(optemp.isPresent()) {
+		if (optemp.isPresent()) {
 			return optemp.get();
-		}
-		else {
-			throw new RuntimeException("Employee does not exists for Id : "+id);
+		} else {
+			throw new RuntimeException("Employee does not exists for Id : " + id);
 		}
 	}
 
